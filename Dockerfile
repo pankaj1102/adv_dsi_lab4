@@ -4,10 +4,12 @@ RUN conda install yellowbrick
 
 RUN pip install mlflow==1.13
 
+RUN conda install psycopg2-binary
+
 RUN pip install psycopg2-binary==2.8.5
 
 ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/work"
 
 RUN echo "export PYTHONPATH=/home/jovyan/work" >> ~/.bashrc
 
-WORKDIR /home/jovyn/work
+WORKDIR /home/jovyan/work
